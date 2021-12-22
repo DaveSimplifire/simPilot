@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "simPilot": {
+      "main": "src/simPilot/main.mo",
+      "type": "motoko"
+    },
+    "simPilot_assets": {
+      "dependencies": [
+        "simPilot"
+      ],
+      "frontend": {
+        "entrypoint": "src/simPilot_assets/src/index.html"
+      },
+      "source": [
+        "src/simPilot_assets/assets",
+        "dist/simPilot_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
